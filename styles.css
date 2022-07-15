@@ -22,7 +22,7 @@
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(31, 128, 31); 
+    background: #111111; 
 }
 
 /* ===== Home ===== */
@@ -30,11 +30,12 @@
 #home{
     height: 100vh;
     width: 100%;
-    background-image:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)) ,url(https://raw.githubusercontent.com/nawazdanish1996/HTML-CSS-mini-project/master/image/bg2.jpg);
+    background-image:linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)) ,url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToSGDkK-FmBdXg6itsd47Q4FQJL3847zNLlA&usqp=CAU);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    transition: all 0.3s ease;
 }
 
 .logo{
@@ -75,11 +76,18 @@
 
 #nav2 li a{
     text-transform: uppercase;
-    text-decoration: underline;
-    text-underline-offset: .4rem;
     color: white;
     font-size: 1rem;
     font-size: 17px;
+    transition: color 0.3s ease;
+    font-weight: 700;
+}
+
+#nav2 li a:hover{
+    color: crimson;
+    text-decoration: underline;
+    text-underline-offset: .4rem;
+    transition: .5s;
 }
 
 #middle{
@@ -106,7 +114,7 @@
     text-align: center;
     margin-top: 3rem;
 }
-#middle a{
+#middle .visit{
     text-align: center;
     color: white;
     border: 1px solid white;
@@ -114,28 +122,252 @@
     border-radius: 5px;
     font-weight: 1000;
 }
-#middle a:hover{
-    background-color: purple;
+#middle .visit:hover{
+    background-color: crimson;
     border: none;
 }
-#middle a:active{
-    background-color: rgb(161, 33, 161);
+#middle .visit:active{
+    background-color: purple;
 }
 
+#iconbtn{
+    transition: all 10sec ease-in-out;
+    text-align: center;
+    margin-top: 1.5rem;
+}
 
+#iconbtn .fa-solid{
+    color: white;
+    font-size: 2.5rem;
+    transition: all 10sec ease-in-out;
+    border: none;
+    border: none;
+}
 
+#iconbtn .fa-solid:hover{
+    color: crimson;
+}
 
+#top{
+    position: fixed;
+    top: 90%;
+    left: 96%;
+    transition: all 1s ease-in-out;
+}
+#top i{
+    color: white;
+    background-color: rgb(218, 83, 110);
+    font-size: 2rem;
+    padding: .5rem;
+    border-radius: 10px;
+}
+#top i:hover{
+    background-color: crimson;
+}
 
+/* ===== About ===== */
+#about{
+    width: 100%;
+    height: 100vh;
+}
 
-#footer{
+#about{
+    padding: 5rem;
+}
+
+#headingAbout{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#headingAbout h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+#left-about{
     padding: 2rem;
+    float: left;
+    width: 50%;
+    /* background-color: green; */
+}
+
+#left-about h1{
+    font-size: 1.5rem;
+    text-align: center;
+    color: crimson;
+}
+
+#left-about p{
+    margin-top: 1rem;
+    text-align: justify;
+    padding: 1rem;
+}
+
+#right-about{
+    float: right;
+    width: 50%;
+    /* background-color: brown; */
+}
+
+#right-about img{
+    /* max-width: 100%; */
+    width: 600px;
+    aspect-ratio: 32/20;
+    border-radius: 10px;
+    /* transition: all 1s ease-in-out; */
+    border: 2px solid crimson;
+}
+
+/* ===== Audio ===== */
+embed{
+    display: block;
+}
+
+/* ===== Course ===== */
+#course{
+    width: 100%;
+    height: 105vh;
+    background: #111111;
+    color: white;
+}
+
+#titleCourse{
+    margin: 0 auto;
+    width: 80%;
     text-align: center;
 }
 
-#footer h2{
-    font-size: 1.2rem;
-    font-family: cursive;
+#titleCourse h1{
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    padding-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: crimson;
 }
-#footer p{
-    margin-top: 2rem;
+
+
+/* Boxes */
+#courseBoxes{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 13%;
+    padding-left: 13%;
+}
+
+#column{
+    flex-basis: 30%;
+    background-image: linear-gradient(to right top, #051937, #0b2d5b, #114381, #155ba9, #1673d4);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 25px 25px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+}
+
+#column:hover{
+    box-shadow: 0 0 30px black;
+}
+
+#column i{
+    margin-top: .5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+#column p{
+    margin-top: .5rem;
+    text-align: justify;
+}
+
+/* ===== Blog ===== */
+#blog{
+    width: 100%;
+    height: 175vh;
+}
+
+#img{
+    text-align: center;
+}
+#img img{
+    margin-top: 3rem;
+    width: 800px;
+    aspect-ratio: 4/2.5;
+}
+
+#blogtitle{
+    text-align: center;
+}
+
+#blogtitle h1{
+    text-align: center;
+    margin-top: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    color: crimson;
+}
+
+#blogtitle p{
+    margin-top: 1rem;
+    text-align: justify;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+/* ===== Contact ===== */
+#contact{
+    width: 100%;
+    height: 100vh;
+    background: #111111;
+    color: white;
+}
+
+#contactTitle{
+    text-align: center;
+}
+
+#contact form{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 1.5rem;
+}
+
+#contact input{
+    width: 100%;
+    height: 2rem;
+    padding: 1rem;
+    margin-bottom: .5rem;
+}
+
+#contact textarea{
+    width: 100%;
+    height: 10rem;
+    padding: 1rem;
+}
+
+/* ===== Footer ===== */
+
+footer{
+    background-color: crimson;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer p{
+    font-size: 1.2rem;
+}
+
+footer a{
+    color: #f1c40f;
+    transition: all 1s ease;
+}
+
+footer a:hover{
+    color: rgb(190, 36, 67);
 }
